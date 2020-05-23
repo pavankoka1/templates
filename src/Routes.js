@@ -24,7 +24,7 @@ const Routes = () => {
         transitions.map(({item, props, key}) => (
             <animated.div key={key} style={props}>
                 <Switch location={item}>
-                    <Route exact path='/' component={Home} />
+                    <Route exact path='/' component={Video} />
                     <Route exact path='/grid-layout' component={GridLayout} />
                     <Route exsct path='/video' component={Video} />
                 </Switch>

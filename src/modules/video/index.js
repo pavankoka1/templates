@@ -8,6 +8,8 @@ const Video = () => {
 
     const springs = useSpring({
         to: async (next, cancel) => {
+            await next({opacity: 0})
+            await next({opacity: 0})
             await next({opacity: 1, text: 'Pavan Koka'})
             await next({opacity: 0, text: 'Pavan Koka'})
             await next({opacity: 1, text: 'Web Developer'})
