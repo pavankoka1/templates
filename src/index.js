@@ -16,6 +16,9 @@ import './fonts/Roboto-MediumItalic.ttf';
 import './fonts/Roboto-Regular.ttf';
 import './fonts/Roboto-Thin.ttf';
 import './fonts/Roboto-ThinItalic.ttf';
+import './fonts/Poppins-Medium.ttf';
+import './fonts/Poppins-Bold.ttf';
+import './fonts/Poppins-Regular.ttf';
 
 ReactDOM.render(
   <React.StrictMode>
