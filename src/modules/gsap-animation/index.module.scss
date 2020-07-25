@@ -1,0 +1,50 @@
+.wrapper {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    // background-image: linear-gradient(to right, rgba($color: #ffafbd, $alpha: 1), rgba($color: #ffc3a0, $alpha: 1));
+    background-image: url('../../assets/images/ironman.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .buttons {
+        display: flex;
+        margin-left: 50px;
+
+        .button {
+            padding: 8px 16px;
+            border-radius: 4px;
+            // background-image: linear-gradient(to top, rgba($color: #de6262, $alpha: 1), rgba($color: #ffb88c, $alpha: 1));
+            background-color: black;
+            color: #ffdde1;
+            margin-right: 50px;
+            width: fit-content;
+            cursor: pointer;
+
+            &:hover {
+                background-image: linear-gradient(to top, rgba($color: #42275a, $alpha: 0.75), rgba($color: #734b6d, $alpha: 0.75));
+                color: white;
+            }
+        }
+    }
+
+    .box {
+        margin-left: 60px;
+        height: 100px;
+        width: 100px;
+        // background-image: linear-gradient(to right, rgba($color: #ee9ca7, $alpha: 1), rgba($color: #ffdde1, $alpha: 1));
+        // background-image: linear-gradient(to right, rgba($color: #ffafbd, $alpha: 1), rgba($color: #ffc3a0, $alpha: 1));
+        // background-image: linear-gradient(to top, rgba($color: #bdc3c7, $alpha: 1), rgba($color: #2c3e50, $alpha: 1));
+        background-image: url('../../assets/images/ironman-logo.png');
+        background-size: cover;
+        border-radius: 50%;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}

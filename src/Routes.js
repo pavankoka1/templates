@@ -6,6 +6,11 @@ import {
     Home,
     GridLayout,
     Video,
+    ImageCompare,
+    ScrollAnimation,
+    GsapAnimation,
+    ScrollVideo,
+    ReactUseGesture,
 } from 'modules';
 
 const Routes = () => {
@@ -21,15 +26,20 @@ const Routes = () => {
     })
 
     return (
-        transitions.map(({item, props, key}) => (
-            <animated.div key={key} style={props}>
-                <Switch location={item}>
-                    <Route exact path='/' component={Video} />
+        // transitions.map(({item, props, key}) => (
+            // <animated.div key={key} style={props}>
+                <Switch>
+                    <Route exact path='/' component={Home} />
                     <Route exact path='/grid-layout' component={GridLayout} />
-                    <Route exsct path='/video' component={Video} />
+                    <Route exact path='/video' component={Video} />
+                    <Route exact path='/compare' component={ImageCompare} />
+                    <Route exact path='/scroll-animation' component={ScrollAnimation} />
+                    <Route exact path='/gsap' component={GsapAnimation} />
+                    <Route exact path='/scroll-video' component={ScrollVideo} />
+                    <Route exact path='/react-use-gesture' component={ReactUseGesture} />
                 </Switch>
-            </animated.div>
-        ))
+            // {/* </animated.div> */}
+        // ))
     )
 }
 

@@ -1,0 +1,23 @@
+.wrapper {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 24px;
+    height: 70px;
+
+    .text {
+        position: absolute;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 50%;
+        width: 90px;
+        transform: translateX(-50%);
+        font-size: 32px;
+        letter-spacing: 6px;
+        overflow: hidden;
+    }
+}

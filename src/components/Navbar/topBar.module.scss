@@ -1,0 +1,39 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px solid #e6eaea;
+    padding: 0 24px;
+
+    .link {
+        cursor: pointer;
+        color: #202121;
+        font-size: 12px;
+        border-bottom: 1px solid rgba(32,33,33,0.5);
+    }
+
+    .heading {
+        color: #3A3838;
+        transition: all 1s ease;
+        cursor: pointer;
+        font-size: 16px;
+        letter-spacing: 0.4px;
+        font-weight: 400;
+    }
+
+    .icons {
+        display: flex;
+        cursor: pointer;
+
+        .icon {
+            height: 16px;
+            width: 16px;
+            margin-right: 10px;
+        }
+
+        .icon:last-child {
+            margin-right: unset;
+        }
+    }
+}

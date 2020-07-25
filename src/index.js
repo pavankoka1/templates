@@ -19,6 +19,10 @@ import './fonts/Roboto-ThinItalic.ttf';
 import './fonts/Poppins-Medium.ttf';
 import './fonts/Poppins-Bold.ttf';
 import './fonts/Poppins-Regular.ttf';
+import './fonts/Helvetica.ttf';
+import './fonts/Helvetica-Light.ttf';
+import './fonts/Helvetica-Bold.ttf';
+import './fonts/Helvetica-Oblique.ttf';
 
 ReactDOM.render(
   <React.StrictMode>

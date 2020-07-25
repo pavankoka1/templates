@@ -1,0 +1,44 @@
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    // background: radial-gradient(#3a3838 , #2D3436);
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    .card {
+        width: 100vw;
+        height: 100vh;
+        cursor: pointer;
+
+        border-radius: 8px;
+        background-image: url('../../../assets/images/nature.webp');
+        background-size: cover;
+        background-position: center center;
+        box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.5s;
+        will-change: transform;
+        // border: 15px solid lightgray;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+        }
+
+        .baby {
+            position: absolute;
+            box-shadow: 0px 0px 20px -5px rgba(173, 216, 230, 0.4);
+            top: 10px;
+            left: 5px;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
