@@ -15,8 +15,8 @@ function Background3d() {
         // set({ xys: calc(x, y) })
         const props = elementRef.current.getBoundingClientRect();
 
-        const elementX = props.left + 100;
-        const elementY = props.top + 100;
+        const elementX = props.left + 50;
+        const elementY = props.top + 50;
         console.log(x, y, elementX, elementY);
         let angle = Math.atan((elementX - x) / (y - elementY)) * (180 / Math.PI);
         if (y > elementY) {
