@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useLayoutEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styles from './backgroundAnimation.module.scss';
 
@@ -8,12 +8,25 @@ const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg)
 function Background3d() {
 
     const elementRef = useRef(null);
-    const [onBaby, setOnBaby] = useState(null);
-    const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }));
+    const [onBaby, setOnBaby] = useState(false);
+    const [props, set] = useSpring(() => ({ xys: [0, 0, 1], top: 0, config: { mass: 5, tension: 350, friction: 40 } }));
     const [rotate, setRotate] = useSpring(() => ({ val: 0, config: { mass: 5, tension: 350, friction: 40 } }));
+
+    useLayoutEffect(() => {
+        window.addEventListener('scroll', handleScroll, true);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, [])
+
+    function handleScroll() {
+        set({ top: -window.scrollY / 3 })
+    }
 
     function handleMouseMove({ clientX: x, clientY: y }) {
         set({ xys: calc(x, y, onBaby ? 1.25 : 1) })
+        console.log(onBaby);
         const props = elementRef.current.getBoundingClientRect();
 
         const elementX = props.left + 50;
@@ -23,10 +36,6 @@ function Background3d() {
             angle += 180;
         }
         setRotate({ val: angle + 180 });
-    }
-
-    function handleMouseEnter() {
-
     }
 
     return (
@@ -53,18 +62,23 @@ function Background3d() {
                         muted
                     />
                 </div> */}
-                <img
+                {/* <img
                     className={styles.fishGif}
                     src='https://www.animatedimages.org/data/media/194/animated-fish-image-0354.gif'
                     alt='fish'
-                />
-                <animated.img
-                    className={styles.baby}
-                    style={{ transform: props.xys.interpolate(trans) }}
-                    src={require('assets/images/baby-in-hands.png')}
-                    alt='fish'
-                    onMouseEnter={() => setOnBaby(true)}
-                    onMouseLeave={() => setOnBaby(false)}
+                /> */}
+                <animated.div style={{ transform: props.top.interpolate(top => `translateY(${top}px)`) }}>
+                    <animated.img
+                        className={styles.baby}
+                        style={{ transform: props.xys.interpolate(trans) }}
+                        src={require('assets/images/baby-in-hands.png')}
+                        alt='fish'
+                        onMouseEnter={() => setOnBaby(true)}
+                        onMouseLeave={() => setOnBaby(false)}
+                    />
+                </animated.div>
+                <div
+                    className={styles.rain}
                 />
                 <img
                     className={styles.birdGif}

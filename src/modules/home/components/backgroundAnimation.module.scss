@@ -71,12 +71,36 @@
             width: 25px;
             left: -5%;
             top: 30px;
-            animation: leftToRight 8s ease-in-out infinite;
+            animation: leftToRight 20s ease infinite;
         }
 
         .baby {
-            width: 150px;
-            margin-bottom: 15vh;
+            z-index: 10;
+            width: 200px;
+            margin-bottom: 45vh;
+        }
+
+        .rain {
+            z-index: 1;
+            position: absolute;
+            top: 20vh;
+            left: 50%;
+            transform: translateX(-53%);
+            border-radius: 200vw 200vw 0 0;
+            width: 40vw;
+            height: 38vh;
+            background-image: url('../../../assets/images/rain.png');
+            animation: rain 0.2s linear infinite;
+        }
+
+        @keyframes rain {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -20% 100%;
+            }
         }
 
         @keyframes leftToRight {
