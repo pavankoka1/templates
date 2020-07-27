@@ -43,6 +43,7 @@ function Background3d() {
                 className={styles.card}
                 onMouseMove={handleMouseMove}
             >
+                <div className={styles.cloud} />
                 <animated.img
                     ref={elementRef}
                     src={require('assets/images/droplet.jfif')}
@@ -81,6 +82,18 @@ function Background3d() {
                 />
                 <img
                     className={styles.birdGif}
+                    src={require('assets/images/bird.gif')}
+                    alt='bird'
+                />
+                <img
+                    className={styles.birdGif}
+                    style={{ top: '40px', transform: 'translateX(-200%)' }}
+                    src={require('assets/images/bird.gif')}
+                    alt='bird'
+                />
+                <img
+                    className={styles.birdGif}
+                    style={{ top: '20px', transform: 'translateX(-100%)' }}
                     src={require('assets/images/bird.gif')}
                     alt='bird'
                 />

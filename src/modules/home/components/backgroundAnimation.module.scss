@@ -93,6 +93,27 @@
             animation: rain 0.2s linear infinite;
         }
 
+        .cloud {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 12vw;
+            height: 10vh;
+            background-image: url('../../../assets/images/cloud.png');
+            background-size: cover;
+            animation: cloud 30s ease infinite;
+        }
+
+        @keyframes cloud {
+            50% {
+                left: 38%;
+            }
+
+            100% {
+                left: 50%;
+            }
+        }
+
         @keyframes rain {
             0% {
                 background-position: 0 0;
@@ -104,12 +125,17 @@
         }
 
         @keyframes leftToRight {
-            from {
+            0% {
                 left: -6%;
             }
 
-            to {
+            50% {
                 left: 100%;
+                transform: rotatex(180deg);
+            }
+
+            to {
+                left: -6%;
             }
         }
     }
