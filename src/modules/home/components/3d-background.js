@@ -26,7 +26,6 @@ function Background3d() {
 
     function handleMouseMove({ clientX: x, clientY: y }) {
         set({ xys: calc(x, y, onBaby ? 1.25 : 1) })
-        console.log(onBaby);
         const props = elementRef.current.getBoundingClientRect();
 
         const elementX = props.left + 50;
