@@ -15,7 +15,7 @@ function Folder() {
     }
 
     function handleSubmitClick() {
-        if (name.length > 30) {
+        if (!name || name.length > 30) {
             toggleError(true);
         } else {
             toggleError(false);
