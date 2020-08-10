@@ -93,6 +93,18 @@
             animation: rain 0.2s linear infinite;
         }
 
+        .waterfall {
+            z-index: 1;
+            position: absolute;
+            top: 20vh;
+            right: 0;
+            transform: translateX(-53%);
+            width: 10vw;
+            height: 40vh;
+            background-image: url('../../../assets/images/waterfall.png');
+            animation: waterfall 0.05s linear infinite;
+        }
+
         .cloud {
             position: absolute;
             top: 0;
@@ -111,6 +123,16 @@
 
             100% {
                 left: 50%;
+            }
+        }
+
+        @keyframes waterfall {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 0 -100%;
             }
         }
 
