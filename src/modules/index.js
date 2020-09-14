@@ -7,6 +7,8 @@ import GsapAnimation from './gsap-animation';
 import ScrollVideo from './scroll-video';
 import Layout from './layout';
 import ReactUseGesture from './react-use-gesture';
+import SocketIo from './socketIo';
+import FramerMotion from './framer-motion';
 
 export {
     Home,
@@ -18,4 +20,6 @@ export {
     ScrollVideo,
     Layout,
     ReactUseGesture,
+    SocketIo,
+    FramerMotion,
 };
