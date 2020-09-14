@@ -5,12 +5,14 @@
     color: white;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 
     .title {
-        text-align: center;
-        margin-top: 40vh;
-
-        font-size: 32px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
         letter-spacing: 2px;
     }
 
