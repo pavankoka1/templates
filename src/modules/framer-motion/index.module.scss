@@ -1,33 +1,23 @@
 .wrapper {
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    color: white;
-    overflow: hidden;
     position: relative;
-    cursor: pointer;
+    overflow-x: hidden;
 
-    .title {
+    .slider {
         position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 20px;
-        letter-spacing: 2px;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+
+        .emptyDiv {
+            width: 100vw;
+            height: 100vh;
+            background: transparent;
+        }
     }
 
-    .dotsContainer {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .dot {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: rgba($color: #fff, $alpha: 0.5);
+    .emptyPage {
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
     }
 }
