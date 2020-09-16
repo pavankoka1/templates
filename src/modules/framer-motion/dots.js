@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import Circles from './circles';
 import styles from './dots.module.scss';
 
 const width = window.innerWidth;
@@ -8,83 +9,83 @@ const initialX = width / 2 - 5;
 const initialY = height / 2 - 5;
 const formation = [
     {
-        x: initialX - 10,
+        x: initialX - 20,
         y: initialY,
     },
     {
-        x: initialX - 10,
+        x: initialX - 20,
         y: initialY - 10,
     },
     {
-        x: initialX - 10,
+        x: initialX - 20,
         y: initialY - 20,
     },
     {
-        x: initialX - 10,
+        x: initialX - 20,
         y: initialY - 30,
     },
     {
-        x: initialX - 10,
+        x: initialX - 20,
         y: initialY - 40,
     },
     {
-        x: initialX - 10,
+        x: initialX - 20,
         y: initialY + 10,
     },
     {
-        x: initialX - 10,
+        x: initialX - 20,
         y: initialY + 20,
     },
     {
-        x: initialX - 10,
+        x: initialX - 20,
         y: initialY + 30,
     },
     {
-        x: initialX - 10,
+        x: initialX - 20,
         y: initialY + 40,
     },
     {
-        x: initialX + 8,
+        x: initialX - 2,
         y: initialY - 8,
     },
     {
-        x: initialX + 16,
+        x: initialX + 6,
         y: initialY - 16,
     },
     {
-        x: initialX + 24,
+        x: initialX + 14,
         y: initialY - 24,
     },
     {
-        x: initialX + 32,
+        x: initialX + 22,
         y: initialY - 32,
     },
     {
-        x: initialX + 40,
+        x: initialX + 30,
         y: initialY - 40,
     },
     {
-        x: initialX,
+        x: initialX - 10,
         y: initialY,
     },
     {
-        x: initialX + 8,
+        x: initialX - 2,
         y: initialY + 8,
     },
     {
-        x: initialX + 16,
+        x: initialX + 6,
         y: initialY + 16,
     },
     {
-        x: initialX + 24,
+        x: initialX + 14,
         y: initialY + 24,
     },
     {
-        x: initialX + 32,
+        x: initialX + 22,
         y: initialY + 32,
     },
     {
-        x: initialX + 40,
+        x: initialX + 30,
         y: initialY + 40,
     },
 ];
@@ -188,12 +189,12 @@ function Dots() {
         setMount(true);
     }, []);
 
-    function getRandomY() {
-        return Math.floor(Math.random() * height);
+    function getRandomX() {
+        return Math.floor(Math.random() * width / 4);
     }
 
-    function getRandomX() {
-        return Math.floor(Math.random() * width);
+    function getRandomY() {
+        return Math.floor(Math.random() * height);
     }
 
     function handleClick() {
@@ -220,6 +221,7 @@ function Dots() {
 
     return (
         <div className={styles.wrapper} onClick={handleClick}>
+            <Circles />
             <motion.p
                 className={styles.title}
                 initial={{

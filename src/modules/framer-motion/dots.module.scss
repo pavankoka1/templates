@@ -12,6 +12,7 @@ body, html {
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    z-index: 2;
 
     .title {
         position: absolute;

@@ -29,10 +29,6 @@ function ImageZoom() {
                 setTop(height / 5);
                 setImageScaling(1);
             }
-            // else if (top > 0.4 * height) {
-            //     setTop(height / 2);
-            //     setImageScaling(2);
-            // } 
         }
     }
 

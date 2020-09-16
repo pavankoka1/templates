@@ -1,0 +1,48 @@
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .line {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .circle1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        border: 1px solid rgba($color: #fff, $alpha: 0.5);
+    }
+
+    .circle2 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 650px;
+        height: 650px;
+        border-radius: 50%;
+        border: 1px solid rgba($color: #fff, $alpha: 0.5);
+    }
+
+    .circle3 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 700px;
+        height: 700px;
+        border-radius: 50%;
+        border: 1px solid rgba($color: #fff, $alpha: 0.5);
+    }
+}
