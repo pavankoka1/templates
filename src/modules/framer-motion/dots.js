@@ -180,9 +180,6 @@ function Dots() {
     const [mounted, setMount] = useState(false);
 
     useEffect(() => {
-        // setInterval(() => {
-        //     handleClick();
-        // }, 1000);
         setTimeout(() => {
             handleClick();
         }, 500);

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import Icons from 'components/Routes/icons';
 import styles from './circles.module.scss';
 
 const width = window.innerWidth;
@@ -45,6 +46,7 @@ function Circles() {
 
     return (
         <div className={styles.wrapper} onMouseMove={handleMouseMove}>
+            <Icons classNames={styles.icons} />
             {
                 circles.map((circle, i) => (
                     <motion.div
