@@ -51,7 +51,7 @@ function Icons({ classNames }) {
                     rotate: hide ? 0 : 45,
                 }}
             >
-                <Cross isPlus={hide} />
+                <Cross showPlus={hide} />
             </motion.div>
             <div className={styles.icons}>
                 {
@@ -79,7 +79,8 @@ function Icons({ classNames }) {
                                     scale: 2,
                                     x: '25%',
                                 }}
-                            /></NavLink>
+                            />
+                        </NavLink>
                     ))
                 }
             </div>

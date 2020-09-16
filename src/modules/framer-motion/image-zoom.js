@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import VisibilitySensor from 'react-visibility-sensor';
 import styles from './image-zoom.module.scss';
 
 const width = window.innerWidth;
@@ -7,6 +8,7 @@ const height = window.innerHeight;
 
 function ImageZoom() {
     const wrapperRef = useRef(null);
+    const [hideDobbyWords, setDobbyWords] = useState(true);
     const [scaleImage, setImageScaling] = useState(1);
     const [top, setTop] = useState(height / 5);
     window.addEventListener('scroll', handleScroll);
@@ -18,14 +20,17 @@ function ImageZoom() {
 
             if (top >= 0 && top < wrapperHeight * 2 / 3) {
                 const scale = parseFloat((Math.floor((top / (wrapperHeight / 2)) * 20) / 20).toFixed(2));
+                setDobbyWords(true);
                 setTop(top);
                 if (scaleImage !== scale + 1) {
                     setImageScaling(scale + 1.00);
                 }
             } else if (top > wrapperRef.current.offsetTop / 2) {
+                setDobbyWords(false);
                 setTop(wrapperHeight + height);
                 setImageScaling(2);
             } else {
+                setDobbyWords(true);
                 setTop(height / 5);
                 setImageScaling(1);
             }
@@ -57,6 +62,23 @@ function ImageZoom() {
                     }}
                 />
             </div>
+            <motion.div
+                className={styles.dobbyWords}
+                animate={{
+                    y: hideDobbyWords ? 100 : 0,
+                    opacity: hideDobbyWords ? 0 : 1,
+                    // scale: hideDobbyWords ? 0.5 : 1,
+                }}
+                transition={{
+                    stiffness: 50,
+                    duration: 0.5,
+                }}
+            >
+                <p className={styles.left}>Dobby is</p>
+                <div className={styles.space} />
+                <p className={styles.right}>a free elf!</p>
+            </motion.div>
+            <div></div>
         </div>
     )
 }

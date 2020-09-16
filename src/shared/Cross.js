@@ -1,5 +1,4 @@
 import React from "react";
-import { animated } from 'react-spring';
 
 const Cross = props => {
 
@@ -11,9 +10,9 @@ const Cross = props => {
                 height="25"
             />
             <rect
-                x={props.isPlus ? '2' : '0'}
-                y={props.isPlus ? '8' : '12'}
-                width={props.isPlus ? '20' : '25'}
+                x={props.showPlus ? '2' : '0'}
+                y={props.showPlus ? '8' : '12'}
+                width={props.showPlus ? '20' : '25'}
                 height="1"
             />
         </svg>

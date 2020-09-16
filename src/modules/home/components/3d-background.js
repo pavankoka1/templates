@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useLayoutEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
 import styles from './backgroundAnimation.module.scss';
 
@@ -77,8 +78,9 @@ function Background3d() {
                         onMouseLeave={() => setOnBaby(false)}
                     />
                 </animated.div>
-                <div
+                <NavLink
                     className={styles.rain}
+                    to='/framer-motion'
                 />
                 {/* <div
                     className={styles.waterfall}
