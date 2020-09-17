@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
+import cx from 'classnames';
 import { motion } from 'framer-motion';
-import VisibilitySensor from 'react-visibility-sensor';
 import styles from './image-zoom.module.scss';
 
 const width = window.innerWidth;
@@ -62,16 +62,28 @@ function ImageZoom() {
                     }}
                 />
             </div>
+            <motion.p
+                className={cx(styles.dobbyWords, styles.heading)}
+                animate={{
+                    opacity: hideDobbyWords ? 0 : 1,
+                }}
+                transition={{
+                    duration: 1,
+                    delay: hideDobbyWords ? 1 : 0,
+                }}
+            >
+                Since 2019
+            </motion.p>
             <motion.div
                 className={styles.dobbyWords}
                 animate={{
-                    y: hideDobbyWords ? 100 : 0,
+                    y: hideDobbyWords ? 20 : 0,
                     opacity: hideDobbyWords ? 0 : 1,
-                    // scale: hideDobbyWords ? 0.5 : 1,
                 }}
                 transition={{
                     stiffness: 50,
-                    duration: 0.5,
+                    duration: 1,
+                    delay: hideDobbyWords ? 0 : 1,
                 }}
             >
                 <p className={styles.left}>Dobby is</p>

@@ -1,6 +1,6 @@
 .wrapper {
     height: 300vh;
-    background-color: #fffafa;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     overflow-x: hidden;
@@ -17,11 +17,11 @@
 
     .image {
         height: 40vh;
-        width: auto;
+        width: fixed;
     }
 
     .dobbyWords {
-        position: absolute;
+        position: fixed;
         bottom: 50vh;
         transform: translateY(-50%);
         background-image: url('../../assets/images/bg2.jpg');
@@ -42,5 +42,10 @@
         .space {
             width: 25vw;
         }
+    }
+
+    .heading {
+        bottom: 80vh;
+        left: 10vw;
     }
 }
