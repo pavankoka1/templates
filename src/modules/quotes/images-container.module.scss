@@ -1,0 +1,126 @@
+.wrapper {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vh;
+    height: 100vh;
+    background-color: black;
+
+    .images {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        flex-flow: column;
+
+        .img {
+            width: 30vh;
+            height: 30vh;
+            position: relative;
+
+            &.active {
+                animation: masking 300ms ease-in-out forwards;
+                // -webkit-mask-image: radial-gradient(circle at 50% 50%, black 0%, rgba(0, 0, 0, 0.2) 50%);
+                // mask-image: radial-gradient(circle at 50% 50%, black 50%, rgba(0, 0, 0, 0.2) 50%);
+            }
+
+            &.dead::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba($color: #000000, $alpha: 0.6);
+            }
+        }
+    }
+}
+
+@keyframes masking {
+    0% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 0%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 0%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    5% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 2.5%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 2.5%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    10% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 5%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 5%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    15% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 7.5%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 7.5%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    20% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 15%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 15%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    25% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 18.5%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 18.5%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    30% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 20%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 20%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    35% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 21.25%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 21.25%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    40% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 22.5%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 22.5%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    45% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 23.75%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 23.75%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    50% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 25%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 25%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    55% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 27.5%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 27.5%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    60% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 30%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 30%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    65% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 32.5%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 32.5%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    70% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 35%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 35%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    75% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 37.5%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 37.5%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    80% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 40%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 40%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    85% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 42.5%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 42.5%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    90% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 45%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 45%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    95% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 47.5%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 47.5%, rgba(0, 0, 0, 0.2) 50%);
+    }
+    100% {
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 50%, rgba(0, 0, 0, 0.2) 50%);
+        mask-image: radial-gradient(circle at 50% 50%, black 50%, rgba(0, 0, 0, 0.2) 50%);
+    }
+}

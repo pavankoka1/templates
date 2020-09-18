@@ -10,16 +10,16 @@ import styles from './index.module.scss';
 
 const Home = () => {
     return (
-        // <FramerMotion />
+        <FramerMotion />
         // <Folder />
-        <Layout>
-            <div className={styles.wrapper}>
-                <Background3d />
-                <ImageTransition />
-                {/* <Cards />
-                <ScrollEffect /> */}
-            </div>
-        </Layout>
+        // <Layout>
+        //     <div className={styles.wrapper}>
+        //         <Background3d />
+        //         <ImageTransition />
+        //         {/* <Cards />
+        //         <ScrollEffect /> */}
+        //     </div>
+        // </Layout>
     )
 }
 

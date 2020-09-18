@@ -40,8 +40,15 @@
         justify-content: center;
 
         .space {
-            width: 25vw;
+            width: 20vw;
         }
+    }
+
+    .swipe {
+        position: absolute;
+        bottom: 100px;
+        right: 100px;
+        cursor: pointer;
     }
 
     .heading {

@@ -9,6 +9,7 @@ import Layout from './layout';
 import ReactUseGesture from './react-use-gesture';
 import SocketIo from './socketIo';
 import FramerMotion from './framer-motion';
+import Quotes from './quotes';
 
 export {
     Home,
@@ -22,4 +23,5 @@ export {
     ReactUseGesture,
     SocketIo,
     FramerMotion,
+    Quotes,
 };

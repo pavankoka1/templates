@@ -13,6 +13,7 @@ import {
     ReactUseGesture,
     SocketIo,
     FramerMotion,
+    Quotes,
 } from 'modules';
 
 const Routes = () => {
@@ -41,6 +42,7 @@ const Routes = () => {
             <Route exact path='/react-use-gesture' component={ReactUseGesture} />
             <Route exact path='/socket-io' component={SocketIo} />
             <Route exact path='/framer-motion' component={FramerMotion} />
+            <Route exact path='/quotes' component={Quotes} />
         </Switch>
         // {/* </animated.div> */}
         // ))

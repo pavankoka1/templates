@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import cx from 'classnames';
+import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import styles from './image-zoom.module.scss';
 
@@ -19,7 +20,8 @@ function ImageZoom() {
             const wrapperHeight = wrapperRef.current.offsetHeight;
 
             if (top >= 0 && top < wrapperHeight * 2 / 3) {
-                const scale = parseFloat((Math.floor((top / (wrapperHeight / 2)) * 20) / 20).toFixed(2));
+                // const scale = parseFloat((Math.floor((top / (wrapperHeight / 2)) * 20) / 20).toFixed(2));
+                const scale = top / (wrapperHeight / 2);
                 setDobbyWords(true);
                 setTop(top);
                 if (scaleImage !== scale + 1) {
@@ -90,6 +92,40 @@ function ImageZoom() {
                 <div className={styles.space} />
                 <p className={styles.right}>a free elf!</p>
             </motion.div>
+            <NavLink
+                to='/quotes'
+            >
+                <motion.div
+                    className={styles.swipe}
+                    animate={{
+                        opacity: hideDobbyWords ? 0 : 1,
+                    }}
+                    transition={{
+                        delay: hideDobbyWords ? 0 : 2
+                    }}
+                >
+                    {
+                        [1, 2, 3, 4, 5, 6].map(id => (
+                            <motion.img
+                                initial={{
+                                    x: 0,
+                                }}
+                                animate={{
+                                    x: 20,
+                                }}
+                                transition={{
+                                    yoyo: Infinity,
+                                }}
+                                style={{
+                                    opacity: id / 6,
+                                }}
+                                src={require('assets/images/icons/right-arrow.png')}
+                                alt='swipe'
+                            />
+                        ))
+                    }
+                </motion.div>
+            </NavLink>
             <div></div>
         </div>
     )
