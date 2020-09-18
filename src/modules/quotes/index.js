@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import ImagesText from './images-text';
 import ImagesContainer from './images-container';
 import styles from './index.module.scss';
 
@@ -61,45 +61,10 @@ function Quotes() {
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.textContainer}>
-                {
-                    quotes.map(item => {
-                        const selected = item.id === activeId;
-
-                        return (
-                            <div className={styles.text}>
-                                <motion.p
-                                    className={styles.quote}
-                                    animate={{
-                                        opacity: selected ? 1 : 0
-                                    }}
-                                    transition={{
-                                        duration: selected ? 3 : 0,
-                                        delay: selected ? 0.3 : 0,
-                                        stiffness: 300,
-                                    }}
-                                >
-                                    {item.quote}
-                                </motion.p>
-                                <motion.p
-                                    className={styles.name}
-                                    animate={{
-                                        opacity: selected ? 1 : 0,
-                                        y: selected ? 40 : 75,
-                                    }}
-                                    transition={{
-                                        duration: selected ? 2 : 0,
-                                        delay: selected ? 2 : 0,
-                                        stiffness: 300,
-                                    }}
-                                >
-                                    - {item.name}
-                                </motion.p>
-                            </div>
-                        )
-                    })
-                }
-            </div>
+            <ImagesText
+                activeId={activeId}
+                quotes={quotes}
+            />
             <ImagesContainer
                 width={height / 4}
                 activeId={activeId}
