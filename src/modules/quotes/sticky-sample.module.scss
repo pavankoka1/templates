@@ -1,0 +1,22 @@
+.wrapper {
+    position: relative;
+    height: 300vh;
+    background-color: lightblue;
+
+    .header {
+        width: 100vw;
+        background-color: lightgray;
+        height: 80vh;
+        margin-bottom: 20px;
+
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+
+    .content {
+        height: 0;
+        width: 100%;
+        background-color: lightblue;
+    }
+}

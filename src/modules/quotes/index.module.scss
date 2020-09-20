@@ -1,5 +1,62 @@
 .wrapper {
-    display: flex;
-    height: 175vh;
     position: relative;
+    background: black;
+
+    .firstFold {
+        display: flex;
+        height: 250vh;
+        position: relative;
+
+        .stickyContainer {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+        }
+    }
+
+    .secondFold {
+        width: 100vw;
+        height: 500vh;
+        position: relative;
+
+        .stickyContainer {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+
+            .endText {
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+
+                display: flex;
+                background: linear-gradient(147deg, #d82020 0%, #c59169 74%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: #ff4e00;
+                font-size: 32px;
+
+                .word {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
 }
+
+// https://b.kisscc0.com/20180705/fe/kisscc0-owl-fictional-universe-of-harry-potter-mail-hogwar-front-view-owl-5b3e111bae95f4.8935426215307942677151.png
+// https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/2180px-Harry_Potter_wordmark.svg.png
+// https://1.bp.blogspot.com/-vUzlVyI0DCs/XdgT_54lxuI/AAAAAAABlXU/71Q3hGcXlnoJDNasQUlER-1oeQbO5jKAgCLcBGAsYHQ/s1600/hogwarts-silhouette-clipart-3.png
+// https://cdn.instructables.com/ORIG/F0Z/7GL0/IUYD73S8/F0Z7GL0IUYD73S8.png?fit=bounds
+// https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Heroesjourney.svg/2000px-Heroesjourney.svg.png
+// https://lh3.googleusercontent.com/proxy/LYJP0b-WxhvTwwxQ_ZCSVl-89Rs-IgdCDl4MV_NR1h9AuWn4pBjCfHhTUWR5-MpQpvxAruNGT6tfzoJAyUkeauuTqE28PZmT03KT_GcVqlE73Obg9DHB8eEe0xV2_qE7jTGwL3K_CLUnqQKpIK7HEYFSwurCQ4D22kBCExwvH4-uGwQ
+// https://lh3.googleusercontent.com/proxy/BMtR7UHOTeZHuwTUSIr-3Gt3zdsTk-aYO6LHxzIbq2C3jUSjRS16fyQnKd7KaSddnPHaOkoCsDq6A24wyitMsRDgrEKJaSmZOdXJ4cWCL0HF1LQHf8AKWI0l4xhF3OCiTjozV_vwgv8vdQCT3yiblIuEByZCQQTSvKUhY-ts3Ew
+// https://lh3.googleusercontent.com/proxy/NfJyL0oxhKByD-aaWH5QvxjvPuFoEuseoloereVvSmvGVo-4G-zPKJadK1FxeE0DL8DIiKO7G3zGMdgF9GOgkMKmeCZZxc-HQAh1WINW-mdab_eikTvJoOQTcMGTBhKu5PYRYPUPEwflLVhB0rpkd13E6yJvJfpeXBKVvarW

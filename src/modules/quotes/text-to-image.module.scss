@@ -1,0 +1,30 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+
+    .image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .overlay {
+        position: absolute;
+        z-index: 2;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        background-image: url('../../assets/images/hp/hogwarts.png');
+        // background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        // background-color: lightblue;
+        // mask-image: url('../../assets/images/transparent/wings.jpg');
+        mask-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/2180px-Harry_Potter_wordmark.svg.png);
+        // mask-size: 50vmin;
+        // 6000
+        mask-position: 53% 30%;
+        mask-repeat: no-repeat;
+    }
+}

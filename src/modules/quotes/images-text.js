@@ -19,7 +19,6 @@ function ImagesText({ activeId, quotes }) {
                                 }}
                                 transition={{
                                     duration: selected ? 3 : 0,
-                                    delay: selected ? 0.3 : 0,
                                     stiffness: 300,
                                 }}
                             >
@@ -33,7 +32,7 @@ function ImagesText({ activeId, quotes }) {
                                 }}
                                 transition={{
                                     duration: selected ? 2 : 0,
-                                    delay: selected ? 2 : 0,
+                                    delay: selected ? 1.5 : 0,
                                     stiffness: 300,
                                 }}
                             >
