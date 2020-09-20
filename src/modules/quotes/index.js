@@ -113,14 +113,18 @@ function Quotes() {
             </div>
             <div className={styles.secondFold} ref={TextToImgRef}>
                 <div className={styles.stickyContainer}>
-                    <AnimateText
-                        visible={showEndText}
-                        text={['Until', 'the', 'end']}
-                        duration={1.5}
-                        y={0}
-                        classNames={styles.endText}
-                        wordClassNames={styles.word}
-                    />
+                    {
+                        showEndText && (
+                            <AnimateText
+                                visible={showEndText}
+                                text={['Until the end', 'the', 'end']}
+                                duration={1.5}
+                                y={0}
+                                classNames={styles.endText}
+                                wordClassNames={styles.word}
+                            />
+                        )
+                    }
                     <TextToImage
                         maskSize={maskSize}
                         bgSize={bgSize}
