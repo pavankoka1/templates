@@ -20,7 +20,6 @@ function ImageZoom() {
             const wrapperHeight = wrapperRef.current.offsetHeight;
 
             if (top >= 0 && top < wrapperHeight * 2 / 3) {
-                // const scale = parseFloat((Math.floor((top / (wrapperHeight / 2)) * 20) / 20).toFixed(2));
                 const scale = top / (wrapperHeight / 2);
                 setDobbyWords(true);
                 setTop(top);
@@ -43,15 +42,11 @@ function ImageZoom() {
         <div className={styles.wrapper} ref={wrapperRef}>
             <div
                 className={styles.container}
-                style={{
-                    position: wrapperRef.current && top > 0 && top < height * 2 && top !== wrapperRef.current.offsetTop + height && top !== height / 5 ? 'fixed' : 'relative'
-                }}
             >
                 <motion.img
                     src={require('assets/images/dobby.png')}
                     className={styles.image}
                     style={{
-                        marginTop: wrapperRef.current && top < height * 2 && top !== wrapperRef.current.offsetTop + height && top !== height / 5 ? '0' : top,
                         opacity: scaleImage * 0.4 + 0.2,
                     }}
                     animate={{
@@ -126,7 +121,6 @@ function ImageZoom() {
                     }
                 </motion.div>
             </NavLink>
-            <div></div>
         </div>
     )
 }

@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 import Routes from './Routes';
 import * as serviceWorker from './serviceWorker';
+
 import './fonts/Roboto-Black.ttf';
 import './fonts/Roboto-BlackItalic.ttf';
 import './fonts/Roboto-Bold.ttf';
@@ -27,7 +30,9 @@ import './fonts/Helvetica-Oblique.ttf';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes />
+      <Provider store={store}>
+        <Routes />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
