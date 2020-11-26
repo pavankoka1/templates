@@ -38,7 +38,7 @@
         position: fixed;
         bottom: 50vh;
         left: 50vW;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) !important;
         background-image: url('../../assets/images/bg2.jpg');
         // -moz-box-shadow: inset 0 0 10px #000000;
         // -webkit-box-shadow: inset 0 0 10px #000000;
