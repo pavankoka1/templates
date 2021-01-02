@@ -73,8 +73,14 @@ function ImageZoom() {
             </motion.p>
             <motion.div
                 className={styles.dobbyWords}
+                initial={{
+                    x: '-50%',
+                    y: '-50%',
+                }}
                 animate={{
-                    y: hideDobbyWords ? 20 : 0,
+                    // y: hideDobbyWords ? 20 : 0,
+                    x: '-50%',
+                    y: `calc(-50% - ${!hideDobbyWords ? 20 : 0}px)`,
                     opacity: hideDobbyWords ? 0 : 1,
                 }}
                 transition={{
@@ -103,16 +109,15 @@ function ImageZoom() {
                         [1, 2, 3, 4, 5, 6].map(id => (
                             <motion.img
                                 initial={{
-                                    x: 0,
+                                    opacity: 0,
                                 }}
                                 animate={{
-                                    x: 20,
+                                    opacity: 1,
                                 }}
                                 transition={{
                                     yoyo: Infinity,
-                                }}
-                                style={{
-                                    opacity: id / 6,
+                                    delay: id / 6,
+                                    duration: 1.5 - id / 6,
                                 }}
                                 src={require('assets/images/icons/right-arrow.png')}
                                 alt='swipe'
