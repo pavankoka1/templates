@@ -13,7 +13,7 @@
     "framer-motion": "^2.6.13",
     "gsap": "^3.2.6",
     "logrocket": "^1.0.14",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-compare-image": "^2.0.4",
     "react-dom": "^16.13.1",
