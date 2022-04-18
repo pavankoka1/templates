@@ -98,6 +98,36 @@
   src: local('PoppinsBold'), url(./fonts/Helvetica-Oblique.ttf);
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'MontserratLight';
+  src: local('MontserratLight'), url(./fonts/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: 'MontserratBold';
+  src: local('MontserratBold'), url(./fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'MontserratThin';
+  src: local('MontserratThin'), url(./fonts/Montserrat-Thin.ttf);
+}
+
+@font-face {
+  font-family: 'MontserratSemiBold';
+  src: local('MontserratSemiBold'), url(./fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'MontserratExtraLight';
+  src: local('MontserratExtraLight'), url(./fonts/Montserrat-ExtraLight.ttf);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

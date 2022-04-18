@@ -14,6 +14,7 @@ import {
     SocketIo,
     FramerMotion,
     Quotes,
+    Resume,
 } from 'modules';
 
 const Routes = () => {
@@ -43,6 +44,7 @@ const Routes = () => {
             <Route exact path='/socket-io' component={SocketIo} />
             <Route exact path='/framer-motion' component={FramerMotion} />
             <Route exact path='/quotes' component={Quotes} />
+            <Route exact path='/resume' component={Resume} />
         </Switch>
         // {/* </animated.div> */}
         // ))
