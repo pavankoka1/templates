@@ -13,7 +13,7 @@ function Resume() {
     <div className={styles.wrapper}>
         <Header />
         <div className={styles.content}>
-            <p className={styles.header}></p>
+            {/* <p className={styles.header}></p> */}
             <Home />
             <Education />
             <Experience />
