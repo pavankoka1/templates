@@ -1,11 +1,26 @@
 .wrapper {
+    position: relative;
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     border-radius: 5px;
-    overflow: hidden;
+    overflow: visible;
 
     font-family: 'MontserratExtraLight';
     color: #7a5932;
+
+    .zigzag {
+        position: absolute;
+        bottom: 100px;
+        right: 0px;
+        width: 150px;
+    }
+
+    .hogwards {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        width: 150px;
+    }
 
     .image {
         width: 400px;

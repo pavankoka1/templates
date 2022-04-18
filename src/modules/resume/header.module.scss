@@ -1,0 +1,44 @@
+.wrapper {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 1250px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+
+    .icon {
+        position: fixed;
+        left: -55px;
+        top: 27px;
+        cursor: pointer;
+    }
+
+    .links {
+        height: 78px;
+        background-color: #faeddf;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .link {
+            padding: 15px;
+            color: #7a5932;
+            text-decoration: none;
+
+            font-size: 15px;
+            font-family: 'MontserratSemiBold';
+            font-weight: 500;
+
+            &:active {
+                color: #198597;
+            }
+
+            &:hover {
+                color: #198597;
+            }
+        }
+    }
+}
