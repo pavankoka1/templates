@@ -57,7 +57,7 @@ function Icons({ classNames }) {
                 {
                     icons.map(icon => (
                         <NavLink
-                            to={'/react-use-gesture'}
+                            to={'/resume'}
                         >
                             <motion.img
                                 key={`${icon.id}-${icon.icon}`}
