@@ -1,0 +1,118 @@
+.cardsWrapper {
+    display: grid;
+    grid-template-columns: repeat(1);
+    gap: 32px;
+
+    .card {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 32px;
+        cursor: pointer;
+
+        
+        color: #7a5932;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        border-radius: 25px;
+        background-color: #faedde;
+
+        &:hover {
+            scale: 1.02;
+        }
+
+        &.selected {
+            position: fixed;
+            left: 0;
+            top: 0;
+            // left: 50%;
+            // top: 50%;
+            // transform: translate(-50%, -50%);
+            width: 700px;
+            padding: 0;
+            // box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            cursor: auto;
+            border-radius: 0;
+
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        // .modalWrapper {
+        //     position: fixed;
+        //     left: 0;
+        //     top: 0;
+        //     width: 100vw;
+        //     height: 100vh;
+
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+
+        //     background-color: rgba(0, 0, 0, 0.5);
+
+        //     .cardModal {
+        //         // position: relative;
+        //         padding: 32px 50px;
+        //     }
+        // }
+
+        .fixed {
+            padding: 20px;
+            background-color: #faedde;
+            border-radius: 10px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-family: 'Montserrat';
+        }
+
+
+
+        .cardModal {
+            padding: 36px;
+            background-color: #faedde;
+            border-radius: 25px;
+            position: relative;
+
+            .close {
+                position: absolute;
+                right: 24px;
+                top: 24px;
+                width: 24px;
+                cursor: pointer;
+            }
+
+            .date {
+                font-size: 16px;
+                font-family: 'MontserratBold';
+                line-height: 30px;
+                color: #7a5932;
+            }
+    
+            .title {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 30px;
+                color: #7a5932;
+                font-family: 'MontserratBold';
+            }
+    
+            .description {
+                margin-top: 12px;
+                color: #7a5932;
+    
+                & p {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}

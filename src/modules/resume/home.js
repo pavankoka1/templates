@@ -42,6 +42,7 @@ function Home() {
             type: 'spring', 
             stiffness: 1,
             ease: 'easeOut',
+            damping: 0,
           }}
         />
     </div>

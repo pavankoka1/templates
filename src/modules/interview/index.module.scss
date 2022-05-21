@@ -1,0 +1,42 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    .carouselWrapper {
+        position: relative;
+        // width: 200px;
+        // height: 200px;
+        width: fit-content;
+        height: fit-content;
+
+        .card {
+            padding: 20px;
+            height: 100px;
+            width: 400px;
+            border: 1px solid blue;
+        }
+
+        .active {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: blue;
+            border: 1px solid red;
+        }
+    }
+
+    .button {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        cursor: pointer;
+    }
+}

@@ -11,6 +11,7 @@ import SocketIo from './socketIo';
 import FramerMotion from './framer-motion';
 import Quotes from './quotes';
 import Resume from './resume'
+import Interview from './interview';
 
 export {
     Home,
@@ -26,4 +27,5 @@ export {
     FramerMotion,
     Quotes,
     Resume,
+    Interview,
 };
